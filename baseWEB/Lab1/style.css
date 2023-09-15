@@ -1,0 +1,120 @@
+body {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Comic Sans MS", serif;
+}
+
+p {
+  margin: 0;
+}
+
+h3 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.task {
+  max-width: 500px;
+  max-height: 400px;
+  width: 80vw;
+  height: 100vh;
+  margin: auto;
+}
+.task header {
+  background-color: #2E9AFE;
+  height: 15%;
+}
+.task main {
+  height: 70%;
+}
+.task .left {
+  width: 75%;
+  height: 100%;
+  background-color: #BEF781;
+}
+.task .right {
+  width: 25%;
+  height: 100%;
+  background-color: #688A08;
+}
+.task footer {
+  background-color: #00FFFF;
+  height: 15%;
+}
+.task-float header, .task-float main, .task-float footer {
+  position: relative;
+}
+.task-float .left, .task-float .right {
+  position: relative;
+}
+.task-float .left {
+  float: left;
+}
+.task-float .right {
+  float: right;
+}
+.task-float p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+.task-flex header, .task-flex main, .task-flex footer, .task-flex .left, .task-flex .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(100, 1fr);
+  grid-template-rows: repeat(100, 1fr);
+}
+.task-grid header, .task-grid main, .task-grid footer {
+  position: relative;
+}
+.task-grid .left, .task-grid .right {
+  position: relative;
+}
+.task-grid p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+.task-grid header {
+  grid-column-start: 1;
+  grid-column-end: 100;
+  grid-row-start: 1;
+  grid-row-end: 15;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.task-grid .left {
+  grid-column-start: 1;
+  grid-column-end: 75;
+  grid-row-start: 15;
+  grid-row-end: 85;
+  height: 100%;
+  width: auto;
+}
+.task-grid .right {
+  grid-column-start: 75;
+  grid-column-end: 100;
+  grid-row-start: 15;
+  grid-row-end: 85;
+  height: 100%;
+  width: auto;
+}
+.task-grid footer {
+  grid-column-start: 1;
+  grid-column-end: 100;
+  grid-row-start: 85;
+  grid-row-end: 100;
+  height: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
