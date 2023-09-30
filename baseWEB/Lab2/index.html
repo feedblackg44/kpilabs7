@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Lab-2 WEB basics"/>
+	<meta name="keywords" content="HTML"/>
+	<link rel="stylesheet" href="style.css">
+	<title>Плостак Ілля ІС-02 Лаб-2 Варіант-85</title>
+</head>
+<body>
+	<div class="switcher">
+		<button class="switcher-button right-to-left">Перемикач</button>
+	</div>
+
+	<div id="task1_div">
+		<h2 class="task_name">Завдання 1</h2>
+		<div id="task1">
+			<div class="left">
+				<p class="form_header"><b>Форма для заповнення</b></p>
+				<form class="form">
+					<label>
+						<input title="ТТТТТТ Т.Т." type="text" name="name" placeholder="ПІБ">
+					</label>
+					<label>
+						<input title="ТТ-ЧЧ" type="text" name="group" placeholder="Група">
+					</label>
+					<label>
+						<input title="(ЧЧЧ)-ЧЧЧ-ЧЧ-ЧЧ" type="text" name="phone" placeholder="Телефон">
+					</label>
+					<label>
+						<input title="м. ЧЧЧЧЧЧ" type="text" name="address" placeholder="Адреса">
+					</label>
+					<label>
+						<input title="тттттт@ттттт.com" type="text" name="mail" placeholder="e-mail">
+					</label>
+					<button class="button" id="send">Підтвердити</button>
+				</form>
+			</div>
+			<div class="right">
+				<p class="form_header"><b>Введені дані</b></p>
+				<div id="output"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="task2_div" class="hidden">
+		<h2 class="task_name">Завдання 2</h2>
+		<div id="task2">
+			<label for="color_picker">
+				<input type="color" value='#000000' id="color_picker"/>
+			</label>
+			<table class="table"></table>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

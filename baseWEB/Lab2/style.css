@@ -1,0 +1,101 @@
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  width: 50%;
+  margin: 10px auto 50px;
+}
+body .switcher {
+  align-self: center;
+  width: 100%;
+}
+body .switcher .switcher-button {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  width: 100%;
+  border-radius: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  background: linear-gradient(270deg, #fff, #000);
+}
+body .switcher .switcher-button:hover {
+  cursor: pointer;
+}
+body .hidden {
+  display: none;
+}
+body .task_name {
+  text-align: center;
+  margin-bottom: 20px;
+}
+body #task1 {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 50px;
+}
+body #task1 .right {
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+body #task1 .left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #task1 .left p, body #task1 .left label {
+  margin: 0;
+}
+body .form_header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+body .form {
+  display: flex;
+  flex-direction: column;
+}
+body .form input {
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  border-radius: 2px;
+  border: solid 1px rgb(166, 166, 166);
+}
+body .form input.Error {
+  border-color: red;
+}
+body #output div {
+  align-content: center;
+  margin: 0 15% 10px 15%;
+}
+body .button {
+  margin-top: 20px;
+  background: rgb(166, 166, 166);
+  border: 2px solid black;
+  padding: 10px 0;
+  border-radius: 10px;
+  color: #000;
+  font-weight: bold;
+}
+body .button:hover {
+  cursor: pointer;
+  background: #c9c9c9;
+}
+body #color_picker {
+  width: 100%;
+}
+body .table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+body .table td {
+  border: 1px solid darkgreen;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
