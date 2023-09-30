@@ -1,4 +1,5 @@
-﻿*.docx
+﻿*.css.map
+*.docx
 
 ### Python template
 # Byte-compiled / optimized / DLL files
