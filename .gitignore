@@ -2,6 +2,11 @@
 *.docx
 *.tmp
 
+**/node_modules/
+
+package.json
+package-lock.json
+
 ### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/
