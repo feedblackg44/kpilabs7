@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Lab-4 WEB basics"/>
+    <meta name="keywords" content="HTML"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Плостак Ілля ІС-02 Лаб-4</title>
+</head>
+<body>
+<div id="chatContainer">
+    <div id="userHeader">
+        <span id="usernameDisplay"></span>
+    </div>
+    <ul id="messages"></ul>
+    <div id="inputContainer">
+        <div id="messageInputContainer">
+            <input id="messageInput" autocomplete="off" placeholder="Input message" />
+            <button id="btn_sendMessage">Send</button>
+        </div>
+    </div>
+</div>
+<div id="userInputContainer">
+    <input id="usernameInput" placeholder="Input your name" />
+    <button id="btn_setUsername">Set Name</button>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function () {
+        var socket = io();
+
+        $('#chatContainer').hide();
+        $('#messages').hide();
+
+        $('#btn_setUsername').on("click", function () {
+            var username = $('#usernameInput').val();
+            if (username.trim() !== "") {
+                $('#userInputContainer').hide();
+                $('#chatContainer').show();
+                $('#messages').show(); // Показать область сообщений после установки имени
+                $('#usernameDisplay').text('Пользователь: ' + username); // Отображение имени пользователя
+                socket.emit('set username', username);
+            }
+        });
+
+        $('#messageInput').on("keydown", function (event) {
+            if (event.key === "Enter") {
+                var message = $('#messageInput').val();
+                if (message.trim() !== "") {
+                    socket.emit('chat message', message);
+                    $('#messageInput').val('');
+                }
+            }
+        });
+
+        $('#btn_sendMessage').on("click", function () {
+            var message = $('#messageInput').val();
+            if (message.trim() !== "") {
+                socket.emit('chat message', message);
+                $('#messageInput').val('');
+            }
+        });
+
+        socket.on('chat history', function (history) {
+            for (var i = 0; i < history.length; i++) {
+                $('#messages').append($('<li>').text(history[i]));
+            }
+        });
+
+        socket.on('chat message', function (msg) {
+            $('#messages').append($('<li>').text(msg));
+        });
+    });
+</script>
+</body>
+</html>
+</html>

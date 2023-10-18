@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+#chatContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#messages {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+  max-width: 100%;
+  overflow: auto;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+#messages li {
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+#inputContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input#messageInput {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button#btn_sendMessage {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button#btn_sendMessage:hover {
+  background-color: #0056b3;
+}
+
+#userInputContainer,
+#chatContainer {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#userHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#usernameDisplay {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+#userInputContainer {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#userInputContainer input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#userInputContainer button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#userInputContainer button:hover {
+  background-color: #0056b3;
+}
+
+/*# sourceMappingURL=style.css.map */
