@@ -38,8 +38,8 @@
             if (username.trim() !== "") {
                 $('#userInputContainer').hide();
                 $('#chatContainer').show();
-                $('#messages').show(); // Показать область сообщений после установки имени
-                $('#usernameDisplay').text('Пользователь: ' + username); // Отображение имени пользователя
+                $('#messages').show();
+                $('#usernameDisplay').text('User: ' + username);
                 socket.emit('set username', username);
             }
         });
