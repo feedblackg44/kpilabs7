@@ -1,7 +1,7 @@
 import logging
 import sys
 import os
-from datetime import datetime
+import requests
 
 from dotenv import load_dotenv
 
@@ -33,9 +33,11 @@ async def command_start_handler(message: Message) -> None:
     await message.answer(f"Hello, {hbold(message.from_user.full_name)}!")
 
 
-@router.message(Command("get_current_time"))
+@router.message(Command("get_cat_fact"))
 async def command_get_current_time_handler(message: Message) -> None:
-    await message.answer(f"Current time: {hbold(datetime.now().strftime('%H:%M:%S'))}")
+    get_fact_url = "https://catfact.ninja/fact"
+    fact_json = requests.get(get_fact_url).json()
+    await message.answer(f"Random cat fact: {hbold(fact_json['fact'])}")
 
 
 @router.message()
