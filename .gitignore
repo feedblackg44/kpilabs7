@@ -2,6 +2,8 @@
 *.docx
 *.tmp
 
+**/*.env
+
 **/node_modules/
 
 package.json
