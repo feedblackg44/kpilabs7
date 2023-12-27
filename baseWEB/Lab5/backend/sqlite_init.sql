@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS Users (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Login TEXT NOT NULL UNIQUE,
+    FirstName TEXT NOT NULL,
+    LastName TEXT NOT NULL,
+    MiddleName TEXT,
+    Photo BLOB,
+    GroupName TEXT NOT NULL,
+    PhoneNumber TEXT NOT NULL UNIQUE,
+    Address TEXT NOT NULL,
+    Email TEXT NOT NULL UNIQUE,
+    PasswordHash TEXT NOT NULL,
+    AdminLevel INTEGER NOT NULL
+);
